@@ -105,6 +105,7 @@ popd
 %dir %{_opt_qt5_libdir}/cmake/Qt5Multimedia/
 %{_opt_qt5_libdir}/cmake/Qt5Multimedia/Qt5Multimedia_*Plugin.cmake
 %dir %{_opt_qt5_libdir}/cmake/Qt5MultimediaWidgets/
+%{_opt_qt5_plugindir}/video/videonode/libeglvideonode.so
 
 %files devel
 %{_opt_qt5_headerdir}/QtMultimedia/
@@ -126,3 +127,4 @@ popd
 %{_opt_qt5_libdir}/pkgconfig/Qt5Multimedia.pc
 %{_opt_qt5_libdir}/pkgconfig/Qt5MultimediaWidgets.pc
 %{_opt_qt5_archdatadir}/mkspecs/modules/*.pri
+%{_opt_qt5_libdir}/cmake/Qt5Multimedia/Qt5Multimedia_QSGVideoNodeFactory_EGL.cmake
