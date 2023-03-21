@@ -34,7 +34,6 @@ BuildRequires: pkgconfig(libpulse) pkgconfig(libpulse-mainloop-glib)
 %if 0%{?openal}
 BuildRequires: pkgconfig(openal)
 %endif
-BuildRequires: pkgconfig(xv)
 # workaround missing dep
 # /usr/include/gstreamer-1.0/gst/gl/wayland/gstgldisplay_wayland.h:26:10: fatal error: wayland-client.h: No such file or directory
 BuildRequires: wayland-devel
