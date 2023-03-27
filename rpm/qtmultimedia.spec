@@ -11,11 +11,11 @@ Release: 1%{?dist}
 # See LGPL_EXCEPTIONS.txt, LICENSE.GPL3, respectively, for exception details
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 Url:     http://www.qt.io
-%global majmin %(echo %{version} | cut -d. -f1-2)
 Source0: %{name}-%{version}.tar.bz2
 
 # filter plugin/qml provides
 %global __provides_exclude_from ^(%{_opt_qt5_archdatadir}/qml/.*\\.so|%{_opt_qt5_plugindir}/.*\\.so)$
+%{?opt_qt5_default_filter}
 
 BuildRequires: make
 BuildRequires: opt-qt5-qtbase-devel >= %{qt_version}
@@ -37,6 +37,8 @@ BuildRequires: pkgconfig(openal)
 # workaround missing dep
 # /usr/include/gstreamer-1.0/gst/gl/wayland/gstgldisplay_wayland.h:26:10: fatal error: wayland-client.h: No such file or directory
 BuildRequires: wayland-devel
+Requires: opt-qt5-qtbase-gui >= %{qt_version}
+Requires: opt-qt5-qtdeclarative >= %{qt_version}
 
 %description
 The Qt Multimedia module provides a rich feature set that enables you to
