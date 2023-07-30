@@ -1,11 +1,11 @@
-%global qt_version 5.15.9
+%global qt_version 5.15.10
 
 %global openal 1
 %global gst 1.0
 
 Summary: Qt5 - Multimedia support
 Name:    opt-qt5-qtmultimedia
-Version: 5.15.9+kde3
+Version: 5.15.10+kde3
 Release: 1%{?dist}
 
 # See LGPL_EXCEPTIONS.txt, LICENSE.GPL3, respectively, for exception details
